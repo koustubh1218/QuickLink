@@ -1,0 +1,186 @@
+/* Responsive styles for HomePage layout */
+
+/* Large screens (1200px and up) */
+@media (min-width: 1200px) {
+  .main-chat-grid {
+    grid-template-columns: 1fr 2fr 1fr !important;
+  }
+}
+
+/* Medium-large screens (1024px to 1199px) */
+@media (max-width: 1199px) and (min-width: 1024px) {
+  .main-chat-grid {
+    grid-template-columns: 1fr 1.8fr 1fr !important;
+  }
+}
+
+/* Medium screens (768px to 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .main-chat-grid {
+    grid-template-columns: 1fr 1.5fr !important;
+  }
+  .main-chat-container {
+    padding: 2% !important;
+  }
+}
+
+/* Small-medium screens (640px to 767px) */
+@media (max-width: 767px) and (min-width: 640px) {
+  .main-chat-grid {
+    grid-template-columns: 1fr 1.2fr !important;
+  }
+  .main-chat-container {
+    padding: 1% !important;
+  }
+}
+
+/* Tablet Portrait (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+  .main-chat-container {
+    padding: 3% 5% !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+  }
+  
+  .main-chat-grid {
+    grid-template-columns: 1fr 1.8fr !important;
+    height: 100% !important;
+    max-height: 100vh !important;
+    border-radius: 1rem !important;
+  }
+  
+  /* Optimize sidebar for tablet portrait */
+  .main-chat-grid > div:first-child {
+    min-width: 280px !important;
+    max-width: 320px !important;
+  }
+  
+  /* Optimize chat area for tablet portrait */
+  .main-chat-grid > div:nth-child(2) {
+    min-width: 400px !important;
+  }
+}
+
+/* Tablet Landscape (1024px to 1365px) */
+@media (min-width: 1024px) and (max-width: 1365px) and (orientation: landscape) {
+  .main-chat-container {
+    padding: 2% 4% !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+  }
+  
+  .main-chat-grid {
+    grid-template-columns: 1fr 2fr 1fr !important;
+    height: 100% !important;
+    max-height: 100vh !important;
+    border-radius: 1rem !important;
+  }
+  
+  /* Optimize sidebar for tablet landscape */
+  .main-chat-grid > div:first-child {
+    min-width: 250px !important;
+    max-width: 280px !important;
+  }
+  
+  /* Optimize chat area for tablet landscape */
+  .main-chat-grid > div:nth-child(2) {
+    min-width: 450px !important;
+  }
+  
+  /* Optimize right sidebar for tablet landscape */
+  .main-chat-grid > div:last-child {
+    min-width: 200px !important;
+    max-width: 250px !important;
+  }
+}
+
+/* Large Tablet Portrait (1024px to 1199px) */
+@media (min-width: 1024px) and (max-width: 1199px) and (orientation: portrait) {
+  .main-chat-container {
+    padding: 2% 4% !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+  }
+  
+  .main-chat-grid {
+    grid-template-columns: 1fr 2fr !important;
+    height: 100% !important;
+    max-height: 100vh !important;
+    border-radius: 1rem !important;
+  }
+  
+  /* Optimize sidebar for large tablet portrait */
+  .main-chat-grid > div:first-child {
+    min-width: 300px !important;
+    max-width: 350px !important;
+  }
+  
+  /* Optimize chat area for large tablet portrait */
+  .main-chat-grid > div:nth-child(2) {
+    min-width: 500px !important;
+  }
+}
+
+/* Mobile screens (below 640px) */
+@media (max-width: 639px) {
+  .main-chat-grid {
+    grid-template-columns: 1fr !important;
+    border-radius: 0 !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+  }
+  .main-chat-container {
+    padding: 0 !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+  }
+}
+
+/* Extra small mobile screens (below 480px) */
+@media (max-width: 479px) {
+  .main-chat-grid {
+    grid-template-columns: 1fr !important;
+    border-radius: 0 !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+  }
+  .main-chat-container {
+    padding: 0 !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+  }
+}
+
+/* Landscape mobile orientation */
+@media (max-height: 500px) and (orientation: landscape) {
+  .main-chat-container {
+    padding: 0 !important;
+  }
+  .main-chat-grid {
+    border-radius: 0 !important;
+  }
+}
+
+/* Ensure proper viewport height on mobile */
+@media (max-width: 639px) {
+  .main-chat-container {
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile browsers */
+  }
+  
+  /* Ensure chat area takes full available space */
+  .main-chat-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+  }
+}
